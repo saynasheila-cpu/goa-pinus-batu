@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goa Pinus Batu | Wisata Alam Sejuk</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            DEFAULT: '#8A9A5B', // Hijau Sage
+                            light: '#A5B57A',
+                            dark: '#687742'
+                        },
+                        brown: {
+                            DEFAULT: '#8C5A2B', // Coklat
+                            light: '#A67241',
+                            dark: '#6A411C'
+                        },
+                        cream: {
+                            DEFAULT: '#FDFBF7', // Cream
+                            dark: '#F0EAD6'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);
+        }
+        iframe {
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body class="font-sans bg-cream text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- Navigasi -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <a href="#" class="font-serif text-2xl font-bold text-white transition-colors duration-300" id="nav-logo">
+                    <i class="fa-solid fa-leaf text-sage mr-2"></i>Goa Pinus
+                </a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-white hover:text-sage transition-colors font-medium">Beranda</a>
+                    <a href="#tentang" class="nav-link text-white hover:text-sage transition-colors font-medium">Tentang</a>
+                    <a href="#informasi" class="nav-link text-white hover:text-sage transition-colors font-medium">Informasi</a>
+                    <a href="#galeri" class="nav-link text-white hover:text-sage transition-colors font-medium">Galeri</a>
+                    <a href="#ulasan" class="nav-link text-white hover:text-sage transition-colors font-medium">Kirim Ulasan</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-sage focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-cream shadow-xl absolute top-full left-0 w-full flex-col">
+            <a href="#home" class="block px-6 py-4 text-gray-800 border-b border-gray-200 hover:bg-sage hover:text-white transition">Beranda</a>
+            <a href="#tentang" class="block px-6 py-4 text-gray-800 border-b border-gray-200 hover:bg-sage hover:text-white transition">Tentang</a>
+            <a href="#informasi" class="block px-6 py-4 text-gray-800 border-b border-gray-200 hover:bg-sage hover:text-white transition">Informasi</a>
+            <a href="#galeri" class="block px-6 py-4 text-gray-800 border-b border-gray-200 hover:bg-sage hover:text-white transition">Galeri</a>
+            <a href="#ulasan" class="block px-6 py-4 text-gray-800 hover:bg-sage hover:text-white transition">Kirim Ulasan</a>
+        </div>
+    </nav>
+
+    <!-- Bagian Hero -->
+    <section id="home" class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://travelspromo.com/wp-content/uploads/2019/05/Goa-Pinus-Malang-Tria-Triyanti.jpg" alt="[Latar Belakang Goa Pinus]" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+            <p class="text-sage-light tracking-[0.2em] uppercase font-semibold mb-3">Selamat Datang di</p>
+            <h1 class="font-serif text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
+                GOA PINUS BATU
+            </h1>
+            <p class="text-lg md:text-2xl text-cream-dark mb-10 font-light drop-shadow-md">
+                “Wisata alam dengan suasana sejuk dan pemandangan indah di Kota Batu.”
+            </p>
+            <a href="#tentang" class="inline-block bg-sage hover:bg-sage-dark text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg transform hover:-translate-y-1">
+                Jelajahi Sekarang <i class="fa-solid fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Bagian Tentang -->
+    <section id="tentang" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <img src="https://www.rukita.co/stories/wp-content/uploads/2023/10/Hutan_Pinus_Jogja_Mangunan_2.width-800.format-webp.webp" alt="[Hutan Pinus]" class="rounded-2xl shadow-2xl object-cover h-[500px] w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-brown text-white p-6 rounded-2xl hidden md:block shadow-xl">
+                            <p class="font-serif text-4xl font-bold mb-1">100%</p>
+                            <p class="text-sm font-light">Alam Asri</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-[2px] bg-sage"></div>
+                        <span class="text-sage font-semibold tracking-wider uppercase text-sm">Tentang Destinasi</span>
+                    </div>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        Pesona Alam di <br><span class="text-brown">Jantung Kota Batu</span>
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed text-lg mb-8">
+                        Goa Pinus merupakan wisata alam di Kota Batu yang terkenal dengan hutan pinus yang asri dan suasana yang sejuk. Tempat ini memiliki banyak spot foto menarik dan cocok untuk bersantai bersama keluarga maupun teman.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-sage/20 p-3 rounded-full text-sage">
+                                <i class="fa-solid fa-camera-retro text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Spot Estetik</h4>
+                                <p class="text-sm text-gray-500">Banyak area foto</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brown/20 p-3 rounded-full text-brown">
+                                <i class="fa-solid fa-wind text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Udara Sejuk</h4>
+                                <p class="text-sm text-gray-500">Khas pegunungan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Informasi -->
+    <section id="informasi" class="py-20 bg-sage-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-white">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4">Informasi & Daya Tarik</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 text-gray-900">
+                <div class="bg-cream rounded-2xl p-8 shadow-xl text-center transform transition duration-300 hover:-translate-y-2">
+                    <i class="fa-solid fa-location-dot text-sage text-4xl mb-4"></i>
+                    <h3 class="font-serif text-2xl font-bold mb-3">Lokasi</h3>
+                    <p class="text-gray-600">Gunungsari, Kecamatan Bumiaji, Kota Batu, Jawa Timur.</p>
+                </div>
+                <div class="bg-cream rounded-2xl p-8 shadow-xl text-center transform transition duration-300 hover:-translate-y-2">
+                    <i class="fa-regular fa-clock text-brown text-4xl mb-4"></i>
+                    <h3 class="font-serif text-2xl font-bold mb-3">Jam Buka</h3>
+                    <p class="text-gray-600">08.00 - 17.00 WIB</p>
+                </div>
+                <div class="bg-cream rounded-2xl p-8 shadow-xl text-center transform transition duration-300 hover:-translate-y-2">
+                    <i class="fa-solid fa-ticket text-sage text-4xl mb-4"></i>
+                    <h3 class="font-serif text-2xl font-bold mb-3">Tiket Masuk</h3>
+                    <p class="text-gray-600">Rp10.000 - Rp15.000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Galeri -->
+    <section id="galeri" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-[2px] bg-brown"></div>
+                        <span class="text-brown font-semibold tracking-wider uppercase text-sm">Dokumentasi</span>
+                    </div>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900">Galeri Keindahan</h2>
+                </div>
+                <button onclick="openGalleryModal()" class="mt-6 md:mt-0 px-6 py-3 border-2 border-sage text-sage hover:bg-sage hover:text-white rounded-full font-semibold transition duration-300">
+                    <i class="fa-regular fa-images mr-2"></i> Lihat Dokumentasi Penuh
+                </button>
+            </div>
+
+            <!-- Pratinjau Galeri -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="group relative overflow-hidden rounded-xl h-64 cursor-pointer" onclick="openGalleryModal()">
+                    <img src="https://www.rukita.co/stories/wp-content/uploads/2023/10/Hutan_Pinus_Jogja_Mangunan_2.width-800.format-webp.webp" alt="[Hutan Pinus]" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white font-serif text-xl font-semibold">Hutan Pinus</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl h-64 cursor-pointer" onclick="openGalleryModal()">
+                    <img src="https://gotripina.com/wp-content/uploads/2022/10/IMG_1814.jpg" alt="[Jalan Setapak]" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white font-serif text-xl font-semibold">Jalan Setapak</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl h-64 cursor-pointer" onclick="openGalleryModal()">
+                    <img src="https://salsawisata.com/wp-content/uploads/2023/04/Goa-Pinus-Pujon-batu.jpg" alt="[Pemandangan]" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white font-serif text-xl font-semibold">Pemandangan</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl h-64 cursor-pointer" onclick="openGalleryModal()">
+                    <img src="https://gotripina.com/wp-content/uploads/2022/10/2021-07-01.jpg" alt="[Spot Selfie]" class="w-full h-full object-cover transform transition duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white font-serif text-xl font-semibold">Spot Selfie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Ulasan dengan Integrasi Google Forms -->
+    <section id="ulasan" class="py-20 bg-cream-dark">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="flex items-center justify-center gap-4 mb-4">
+                    <div class="w-12 h-[2px] bg-sage"></div>
+                    <span class="text-sage font-semibold tracking-wider uppercase text-sm">Bagikan Pengalaman Anda</span>
+                    <div class="w-12 h-[2px] bg-sage"></div>
+                </div>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">Kirim Ulasan & Foto</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Masukan Anda sangat berharga bagi kami. Silakan isi form di bawah ini!</p>
+            </div>
+
+            <!-- Embed Google Forms Baru (Berdasarkan tautan terbaru) -->
+            <div class="bg-white rounded-3xl shadow-2xl p-4 md:p-8">
+                <div class="relative overflow-hidden w-full pb-[150%] md:pb-[100%] h-0">
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLScSbZC6Ey5qU4qY931eRdZTaYfMo06EBsHevgTD2oDIyJOCjw/viewform?embedded=true" 
+                        class="absolute top-0 left-0 w-full h-full border-0" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0"
+                        onLoad="onFormSubmit()"
+                    >Memuat…</iframe>
+                </div>
+                
+                <!-- Pemicu Balasan Bot -->
+                <div class="mt-8 text-center">
+                    <p class="text-sm text-gray-500 mb-4 italic">*Setelah menekan tombol 'Kirim' di form di atas, klik tombol di bawah untuk konfirmasi*</p>
+                    <button onclick="triggerBotReply()" class="bg-sage hover:bg-sage-dark text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg">
+                        Konfirmasi Pengiriman <i class="fa-solid fa-paper-plane ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-sage">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="font-serif text-3xl font-bold mb-6 text-sage-light">Goa Pinus Batu</h3>
+            <p class="text-gray-400 mb-8 max-w-xl mx-auto">Gunungsari, Bumiaji, Kota Batu, Jawa Timur. Mari kembali berkunjung dan ciptakan kenangan terbaik!</p>
+            <div class="border-t border-gray-800 pt-8 text-gray-500 text-sm">
+                <p>&copy; 2024 Goa Pinus Batu. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="galleryModal" class="fixed inset-0 z-[100] hidden bg-black bg-opacity-95 backdrop-blur-sm overflow-y-auto">
+        <div class="min-h-screen px-4 text-center">
+            <button onclick="closeGalleryModal()" class="fixed top-4 right-4 text-white text-5xl z-[101]">&times;</button>
+            <div class="inline-block w-full max-w-6xl my-16 text-left align-middle transition-all transform">
+                <h2 class="text-3xl font-serif text-white mb-8 text-center border-b border-gray-700 pb-4">Dokumentasi Penuh Goa Pinus</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <img src="https://www.rukita.co/stories/wp-content/uploads/2023/10/Hutan_Pinus_Jogja_Mangunan_2.width-800.format-webp.webp" class="w-full h-80 object-cover rounded-xl shadow-lg">
+                    <img src="https://gotripina.com/wp-content/uploads/2022/10/IMG_1814.jpg" class="w-full h-80 object-cover rounded-xl shadow-lg">
+                    <img src="https://salsawisata.com/wp-content/uploads/2023/04/Goa-Pinus-Pujon-batu.jpg" class="w-full h-80 object-cover rounded-xl shadow-lg">
+                    <img src="https://gotripina.com/wp-content/uploads/2022/10/2021-07-01.jpg" class="w-full h-80 object-cover rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=800&q=80" class="w-full h-80 object-cover rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=80" class="w-full h-80 object-cover rounded-xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert Balasan Otomatis Bot -->
+    <div id="botAlertModal" class="fixed inset-0 z-[110] hidden flex items-center justify-center px-4 bg-gray-900 bg-opacity-75 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden transform transition-all p-8 text-center">
+            <div class="w-20 h-20 bg-sage text-white rounded-full flex items-center justify-center mx-auto text-4xl mb-6">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+            <p class="text-gray-800 text-lg leading-relaxed mb-8">
+                "Terimakasih atas ulasan dan dokumen yang anda telah kirimkan, semoga goa pinus batu bisa memberikan kenangan yang terbaik, ditunggu kunjungan berikutnyaaaa!!"
+            </p>
+            <button onclick="closeBotAlert()" class="bg-brown hover:bg-brown-dark text-white font-bold py-3 px-10 rounded-full transition duration-300 shadow-md">
+                Sama-sama!
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Efek scroll Navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            const navLogo = document.getElementById('nav-logo');
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const links = document.querySelectorAll('.nav-link');
+
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-nav', 'py-2');
+                navbar.classList.remove('py-4');
+                navLogo.classList.add('text-gray-900');
+                mobileBtn.classList.add('text-gray-900');
+                links.forEach(l => l.classList.add('text-gray-700'));
+            } else {
+                navbar.classList.remove('glass-nav', 'py-2');
+                navbar.classList.add('py-4');
+                navLogo.classList.remove('text-gray-900');
+                mobileBtn.classList.remove('text-gray-900');
+                links.forEach(l => l.classList.remove('text-gray-700'));
+            }
+        });
+
+        // Menu seluler
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Modal Galeri
+        function openGalleryModal() {
+            document.getElementById('galleryModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeGalleryModal() {
+            document.getElementById('galleryModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Pemicu Pesan Bot
+        function triggerBotReply() {
+            document.getElementById('botAlertModal').classList.remove('hidden');
+        }
+        function closeBotAlert() {
+            document.getElementById('botAlertModal').classList.add('hidden');
+        }
+
+        /**
+         * Menangani event onload dari iframe untuk mencegah error ReferenceError
+         */
+        function onFormSubmit() {
+            console.log("Iframe form telah dimuat.");
+        }
+    </script>
+</body>
+</html>
